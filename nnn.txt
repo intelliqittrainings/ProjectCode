@@ -1,0 +1,241 @@
+1 Signup for a gcloud account
+2 Signin into that account
+3 Click on Menu icon on the top left corner
+  Click on Kubernets Engine
+4 Click on Create a project--->enter some project name
+  Click on Create cluster---->Enter some cluster name
+5 Click on Create
+6 To connect to this cluster---->Click on Connect---->copy the goolge clould
+  connect command---->Paste in the Google cloud shell seen at  the top right    corner
+
+
+========================================================================
+1 To see the list of nodes in the cluster
+  kubectl get nodes
+2 To see the ipaddress(public and private) of the nodes
+  kubectl get nodes -o wide
+
+3 To get detailed info about each node
+  kubectl describe nodes node_name
+
+========================================================================
+UseCase
+--------
+Start nginx as a pod in the kubenrets cluster and name the pod as webserver
+kubectl run --image nginx webserver
+
+To see the list of pods
+kubectl get pods
+
+To get detailed info about the pod
+kubectl describe pods pod_name
+
+To delete the pod
+kubectl delete pods pod_name
+
+--------------------------------------------------------------------
+1 Start tomcat in the kubernetes cluster with 3 replicas and name it appserver
+  kubectl run --image tomcat appserver --replicas 3
+
+2 To see the list of pods related to tomcat
+  kubectl get pods -o wide | grep appserver
+--------------------------------------------------------------------------Start 
+
+Start mysql with 2 replcias in kubernbetes cluster and name it mydb
+kubectl run --image mysql:5 mydb --env MYSQL_ROOT_PASSWORD=intelliq --replicas 2
+
+To see the list of pod for mysql
+kubectl get pods -o wide | grep mydb
+
+To delete the mydb service completly from the cluster
+kubectl delete deployment mydb
+
+-------------------------------------------------------------
+1 To sacle the above mysql from 2 replcias to 4 
+  kubectl scale deployments/mydb --replicas=4
+-----------------------------------------------------------------------
+
+
+
+
+To create the pods using the above files
+kubectl create -f pod-definition3.yml
+
+To see the list of pods created in the kubernetes cluster
+kubectl get pods -o wide
+
+To delete the pods created using the above file
+kubectl delete -f pod-definition3.yml
+
+
+gke-standard-cluster-2-default-pool-d5421ce0-dbb9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
